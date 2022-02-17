@@ -32,8 +32,12 @@ export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local va
 
 node -v # || Show the actual NodeJs version.
 
+npm -v # || Show the actual NPM version.
+
+python -V # || Show the actual Python version.
+
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
 
-echo ":/home/container$ ${MODIFIED_STARTUP}" # || Show the new Startup command.
+echo ':/home/container$ ${MODIFIED_STARTUP}' # || Show the new Startup command.
 
 eval ${MODIFIED_STARTUP} # || Start the server.

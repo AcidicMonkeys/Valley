@@ -3,7 +3,7 @@ name: BeetNodes Arm64 NodeJs
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: '0 0 * * 1'
   push:
     branches:
       - main
@@ -12,7 +12,7 @@ on:
       
 jobs:
   push:
-    name: "arm64:nodejs_${{ matrix.tag }}"
+    name: 'arm64:nodejs_${{ matrix.tag }}'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
