@@ -1,6 +1,6 @@
 FROM        arm64v8/node:17
 
-LABEL       author='HiroBeet' maintainer='hirobeet@protonmail.com'
+LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
 
 RUN         apt update \
             && apt -y install ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential chromium libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
@@ -12,4 +12,4 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./entrypoint.sh /entrypoint.sh
-CMD         [ '/bin/bash', '/entrypoint.sh' ]
+CMD         [ "/bin/bash", "/entrypoint.sh" ]

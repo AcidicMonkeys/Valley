@@ -38,6 +38,6 @@ python -V # || Show the actual Python version.
 
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
 
-echo ':/home/container$ ${MODIFIED_STARTUP}' # || Show the new Startup command.
+echo ":/home/container$ ${MODIFIED_STARTUP}" # || Show the new Startup command.
 
 eval ${MODIFIED_STARTUP} # || Start the server.
