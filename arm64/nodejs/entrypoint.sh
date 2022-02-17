@@ -34,7 +34,7 @@ node -v # || Show the actual NodeJs version.
 
 npm -v # || Show the actual NPM version.
 
-python -V # || Show the actual Python version.
+python3 --version # || Show the actual Python version.
 
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
 
