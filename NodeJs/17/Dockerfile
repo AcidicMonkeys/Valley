@@ -1,7 +1,7 @@
 
 FROM        arm64v8/node:17
 
-LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
+LABEL       author="Hiro-Beet" maintainer="hirobeet@protonmail.com"
 
 RUN         apt update \
             && apt -y install ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential \
