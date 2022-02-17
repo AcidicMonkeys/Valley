@@ -1,4 +1,4 @@
-FROM        arm64v8/node:17
+FROM        arm64v8/node:17-buster-slim
 
 LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
 
