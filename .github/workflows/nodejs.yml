@@ -12,7 +12,7 @@ on:
       
 jobs:
   push:
-    name: "arm64:nodejs-${{ matrix.tag }}"
+    name: "arm64:nodejs_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -35,4 +35,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/beetnodes/arm64:nodejs-${{ matrix.tag }}
+            ghcr.io/beetnodes/arm64:nodejs_${{ matrix.tag }}
