@@ -36,4 +36,4 @@ MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || R
 
 echo ":/home/container$ ${MODIFIED_STARTUP}" # || Show the new Startup command.
 
-eval ${MODIFIED_STARTUP} # || Run the server.
+eval ${MODIFIED_STARTUP} # || Start the server.
