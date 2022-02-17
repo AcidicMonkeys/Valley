@@ -1,9 +1,9 @@
-FROM        arm64v8/node:17-buster-slim
+FROM        arm64v8/node:17
 
 LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
 
 RUN         apt update \
-            && apt -y install curl ffmpeg iproute2 git sqlite3 python3 ca-certificates tzdata dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+            && apt -y install ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential \
             && npm -g install npm@latest \
             && useradd -m -d /home/container container
 
