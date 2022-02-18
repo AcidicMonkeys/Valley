@@ -31,6 +31,7 @@ LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
 RUN         apt update \
             && apt -y install ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential chromium libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
             && npm -g install npm@latest \
+            && npm install https://github.com/mapbox/node-sqlite3/archive/refs/tags/v5.0.2.tar.gz \
             && useradd -m -d /home/container container
 
 USER        container
