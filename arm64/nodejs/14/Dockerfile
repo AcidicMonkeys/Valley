@@ -31,6 +31,7 @@ LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
 RUN         apt update \
             && apt -y install ffmpeg iproute2 git sqlite3 python3 tzdata ca-certificates dnsutils build-essential \
             && npm -g install npm@latest \
+            && npm -g install supervisor@latest \
             && useradd -m -d /home/container container
 
 USER        container
