@@ -24,7 +24,7 @@
 
 #|| NodeJs [🚀]-[17]-[Arm64] ||#
 
-FROM        arm64v8/node:17
+FROM        arm64v8/node:17.6.0
 
 LABEL       author="HiroBeet" maintainer="hirobeet@protonmail.com"
 
