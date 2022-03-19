@@ -6,6 +6,7 @@
 These are the actuals Arm64 images.
 # 📢 | NodeJs (Arm64)
 1. `ghcr.io/acidicmonkeys/arm64:nodejs_17` - NodeJs 17
+2. `ghcr.io/acidicmonkeys/arm64:nodejs_16` - NodeJs 16
 # 📢 | Debian (Arm64)
 1. `ghcr.io/acidicmonkeys/arm64:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/arm64:debian_stable` - Debian Stable

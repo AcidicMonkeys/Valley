@@ -25,7 +25,7 @@ FROM        arm64v8/node:17.7.2
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
-            && apt-get -y install ffmpeg iproute2 git sqlite3 python3 python-is-python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+            && apt-get -y install ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python-is-python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
             && npm -g install npm@latest \
             && npm -g install supervisor@latest \
             && useradd -m -d /home/container container
