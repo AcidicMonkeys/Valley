@@ -20,7 +20,7 @@
 
 # || Debian [🚀]-[8]-[Arm64] || #
 
-FROM        arm64v8/debian:8
+FROM        arm64v8/debian:jessie
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 

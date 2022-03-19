@@ -20,7 +20,7 @@
 
 # || Debian [🚀]-[10]-[Arm64] || #
 
-FROM        arm64v8/debian:10
+FROM        arm64v8/debian:10.11
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
