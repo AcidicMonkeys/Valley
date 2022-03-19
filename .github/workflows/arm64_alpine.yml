@@ -18,20 +18,43 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Debian [🚀]-[8]-[Arm64] || #
+# || Alpine [Workflow]-[Arm64] || #
 
-FROM        arm64v8/debian:jessie
+name: Arm64 Alpine
 
-LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
-
-RUN         apt-get update -y \
-            && apt-get upgrade -y \
-            && apt-get install -y git ca-certificates iproute2 tzdata \
-            && useradd -m -d /home/container container
-
-USER        container
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
-
-COPY        ./entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/bash", "/entrypoint.sh" ]
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 1"
+  push:
+    branches:
+      - main
+    paths:
+      - arm64/alpine/**
+      
+jobs:
+  push:
+    name: "arm64:alpine_${{ matrix.tag }}"
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        tag:
+          - latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-buildx-action@v1
+      - uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+      - uses: docker/build-push-action@v2
+        with:
+          context: ./arm64/alpine
+          file: ./arm64/alpine/${{ matrix.tag }}/Dockerfile
+          platforms: linux/arm64
+          push: true
+          tags: |
+            ghcr.io/acidicmonkeys/arm64:alpine_${{ matrix.tag }}
