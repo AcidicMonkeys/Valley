@@ -20,14 +20,14 @@
 
 # || Debian [🚀]-[Latest]-[Hybrid] || #
 
-FROM        arm64v8/debian:latest
+FROM        --platform=$TARGETOS/$TARGETARCH/debian:latest
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
             && apt-get upgrade -y \
             && apt-get install -y git ca-certificates iproute2 tzdata \
-            && useradd -m -d /home/container container
+            && adduser -D -h /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
