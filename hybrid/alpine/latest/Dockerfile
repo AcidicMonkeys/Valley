@@ -20,7 +20,7 @@
 
 # || Alpine [🚀]-[Latest]-[Hybrid] || #
 
-FROM        arm64v8/alpine:latest
+FROM        --platform=$TARGETOS/$TARGETARCH alpine:latest
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 

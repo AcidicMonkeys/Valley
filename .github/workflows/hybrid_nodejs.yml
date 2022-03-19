@@ -55,7 +55,6 @@ jobs:
         with:
           context: ./hybrid/nodejs
           file: ./hybrid/nodejs/${{ matrix.tag }}/Dockerfile
-          platforms: linux/arm64
           push: true
           tags: |
             ghcr.io/acidicmonkeys/hybrid:nodejs_${{ matrix.tag }}

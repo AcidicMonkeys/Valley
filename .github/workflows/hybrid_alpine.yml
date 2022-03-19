@@ -56,7 +56,6 @@ jobs:
         with:
           context: ./hybrid/alpine
           file: ./hybrid/alpine/${{ matrix.tag }}/Dockerfile
-          platforms: linux/arm64
           push: true
           tags: |
             ghcr.io/acidicmonkeys/hybrid:alpine_${{ matrix.tag }}

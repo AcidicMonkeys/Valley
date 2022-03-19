@@ -20,7 +20,7 @@
 
 # || Alpine [🚀]-[3.13]-[Hybrid] || #
 
-FROM        arm64v8/alpine:3.13
+FROM        --platform=$TARGETOS/$TARGETARCH alpine:3.13
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
