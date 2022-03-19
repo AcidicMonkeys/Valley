@@ -26,7 +26,7 @@ LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
             && apt-get upgrade -y \
-            && apt-get install -y zip unzip wget curl git ca-certificates libssl iproute2 tzdata \
+            && apt-get install -y zip unzip wget curl git ca-certificates iproute2 tzdata \
             && useradd -m -d /home/container container
 
 USER        container
