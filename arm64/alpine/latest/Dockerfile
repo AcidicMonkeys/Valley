@@ -25,8 +25,8 @@ FROM        arm64v8/alpine:latest
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apk update \
-            && apk add git ca-certificates iproute2 tzdata \
-            && useradd -m -d /home/container container
+            && apk add --update git ca-certificates iproute2 tzdata \
+            && adduser -D -h /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
