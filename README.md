@@ -5,7 +5,7 @@
 # ⚙️ | Images
 Those are the actuals images.
 
-<p align="center"><img src="https://i.imgur.com/XHyrRnl.jpg" width=60% /></p>
+<p align="center"><img src="https://i.imgur.com/XHyrRnl.jpg" width=80% /></p>
 
 # 📢 | NodeJs
 1. `ghcr.io/acidicmonkeys/hybrid:nodejs_17` - NodeJs 17
