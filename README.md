@@ -21,10 +21,9 @@ Those are the actuals images.
 4. `ghcr.io/acidicmonkeys/hybrid:debian_9` - Debian 9
 # 📢 | Alpine
 1. `ghcr.io/acidicmonkeys/hybrid:alpine_latest` - Alpine Latest
-2. `ghcr.io/acidicmonkeys/hybrid:alpine_stable` - Alpine Stable
-3. `ghcr.io/acidicmonkeys/hybrid:alpine_3.14` - Alpine 3.14
-4. `ghcr.io/acidicmonkeys/hybrid:alpine_3.13` - Alpine 3.13
-5. `ghcr.io/acidicmonkeys/hybrid:alpine_3.12` - Alpine 3.12
+2. `ghcr.io/acidicmonkeys/hybrid:alpine_3.14` - Alpine 3.14
+3. `ghcr.io/acidicmonkeys/hybrid:alpine_3.13` - Alpine 3.13
+4. `ghcr.io/acidicmonkeys/hybrid:alpine_3.12` - Alpine 3.12
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
