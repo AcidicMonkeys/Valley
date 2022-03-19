@@ -18,7 +18,7 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Debian [🚀]-[Latest]-[Arm64] || #
+# || Debian [🚀]-[Latest]-[Hybrid] || #
 
 FROM        arm64v8/debian:latest
 

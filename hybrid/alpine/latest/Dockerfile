@@ -18,7 +18,7 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Alpine [🚀]-[Latest]-[Arm64] || #
+# || Alpine [🚀]-[Latest]-[Hybrid] || #
 
 FROM        arm64v8/alpine:latest
 

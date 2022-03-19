@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Debian [Workflow]-[Arm64] || #
+# || Debian [Workflow]-[Hybrid] || #
 
-name: Arm64 Debian
+name: Hybrid Debian
 
 on:
   workflow_dispatch:
@@ -30,11 +30,11 @@ on:
     branches:
       - main
     paths:
-      - arm64/debian/**
+      - hybrid/debian/**
       
 jobs:
   push:
-    name: "arm64:debian_${{ matrix.tag }}"
+    name: "hybrid:debian_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -55,9 +55,9 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./arm64/debian
-          file: ./arm64/debian/${{ matrix.tag }}/Dockerfile
+          context: ./hybrid/debian
+          file: ./hybrid/debian/${{ matrix.tag }}/Dockerfile
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/acidicmonkeys/arm64:debian_${{ matrix.tag }}
+            ghcr.io/acidicmonkeys/hybrid:debian_${{ matrix.tag }}

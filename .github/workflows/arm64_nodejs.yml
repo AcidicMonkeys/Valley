@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || NodeJs [Workflow]-[Arm64] || #
+# || NodeJs [Workflow]-[hybrid] || #
 
-name: Arm64 NodeJs
+name: hybrid NodeJs
 
 on:
   workflow_dispatch:
@@ -30,11 +30,11 @@ on:
     branches:
       - main
     paths:
-      - arm64/nodejs/**
+      - hybrid/nodejs/**
       
 jobs:
   push:
-    name: "arm64:nodejs_${{ matrix.tag }}"
+    name: "hybrid:nodejs_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -53,9 +53,9 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./arm64/nodejs
-          file: ./arm64/nodejs/${{ matrix.tag }}/Dockerfile
+          context: ./hybrid/nodejs
+          file: ./hybrid/nodejs/${{ matrix.tag }}/Dockerfile
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/acidicmonkeys/arm64:nodejs_${{ matrix.tag }}
+            ghcr.io/acidicmonkeys/hybrid:nodejs_${{ matrix.tag }}

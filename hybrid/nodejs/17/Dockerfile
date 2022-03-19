@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || NodeJs [🚀]-[17]-[Arm64] || #
+# || NodeJs [🚀]-[17]-[Hybrid] || #
 
-FROM        arm64v8/node:17.7.2
+FROM        --platform=$TARGETOS/$TARGETARCH node:17.7.2
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
