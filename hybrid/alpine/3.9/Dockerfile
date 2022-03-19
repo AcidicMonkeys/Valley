@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Alpine [🚀]-[3.10]-[Hybrid] || #
+# || Alpine [🚀]-[3.9]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH alpine:3.10
+FROM        --platform=$TARGETOS/$TARGETARCH alpine:3.9
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
