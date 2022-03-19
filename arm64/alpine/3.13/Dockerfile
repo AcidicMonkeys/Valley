@@ -18,45 +18,19 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Alpine [Workflow]-[Arm64] || #
+# || Alpine [🚀]-[3.13]-[Arm64] || #
 
-name: Arm64 Alpine
+FROM        arm64v8/alpine:3.13
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - arm64/alpine/**
-      
-jobs:
-  push:
-    name: "arm64:alpine_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 3.13
-          - 3.14
-          - latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./arm64/alpine
-          file: ./arm64/alpine/${{ matrix.tag }}/Dockerfile
-          platforms: linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/arm64:alpine_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apk update \
+            && apk add --update git ca-certificates iproute2 tzdata \
+            && adduser -D -h /home/container container
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
