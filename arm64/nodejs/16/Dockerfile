@@ -20,7 +20,7 @@
 
 # || NodeJs [🚀]-[16]-[Arm64] || #
 
-FROM        arm64v8/node:16.14.2
+FROM        arm64v8/node:16.14.2-slim
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
