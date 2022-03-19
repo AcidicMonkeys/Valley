@@ -20,7 +20,7 @@
 
 # || Debian [🚀]-[Stable]-[Hybrid] || #
 
-FROM        arm64v8/debian:stable
+FROM        --platform=$TARGETOS/$TARGETARCH debian:stable
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
