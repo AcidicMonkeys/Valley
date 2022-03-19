@@ -24,7 +24,9 @@ FROM        arm64v8/debian:stable
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
-RUN         apt-get update -y && apt-get upgrade -y && apt-get install -y ca-certificates iproute2 tzdata \
+RUN         apt-get update -y \
+            && apt-get upgrade -y \
+            && apt-get install -y git ca-certificates iproute2 tzdata \
             && useradd -m -d /home/container container
 
 USER        container
