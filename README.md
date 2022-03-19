@@ -10,6 +10,8 @@ Those are the actuals images.
 # 📢 | NodeJs
 1. `ghcr.io/acidicmonkeys/hybrid:nodejs_17` - NodeJs 17
 2. `ghcr.io/acidicmonkeys/hybrid:nodejs_16` - NodeJs 16
+3. `ghcr.io/acidicmonkeys/hybrid:nodejs_14` - NodeJs 15
+4. `ghcr.io/acidicmonkeys/hybrid:nodejs_14` - NodeJs 14
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
