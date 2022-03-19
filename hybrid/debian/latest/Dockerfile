@@ -20,7 +20,7 @@
 
 # || Debian [🚀]-[Latest]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH debian:latest
+FROM        arm64v8/debian:latest
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
