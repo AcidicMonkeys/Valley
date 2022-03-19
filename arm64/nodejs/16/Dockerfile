@@ -18,44 +18,21 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || NodeJs [Workflow]-[Arm64] || #
+# || NodeJs [🚀]-[16]-[Arm64] || #
 
-name: Arm64 NodeJs
+FROM        arm64v8/node:16.14.2
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - arm64/nodejs/**
-      
-jobs:
-  push:
-    name: "arm64:nodejs_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 16
-          - 17
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./arm64/nodejs
-          file: ./arm64/nodejs/${{ matrix.tag }}/Dockerfile
-          platforms: linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/arm64:nodejs_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apt update \
+            && apt -y install ffmpeg iproute2 git sqlite3 python3 python-is-python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+            && npm -g install npm@latest \
+            && npm -g install supervisor@latest \
+            && useradd -m -d /home/container container
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
