@@ -10,6 +10,8 @@ Those are the actuals Arm64 images.
 # 📢 | Debian (Arm64)
 1. `ghcr.io/acidicmonkeys/arm64:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/arm64:debian_stable` - Debian Stable
+3. `ghcr.io/acidicmonkeys/arm64:debian_latest` - Debian 9
+4. `ghcr.io/acidicmonkeys/arm64:debian_stable` - Debian 8
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
