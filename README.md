@@ -8,6 +8,7 @@ These are the actuals Arm64 images.
 `ghcr.io/acidicmonkeys/arm64:nodejs_17` - NodeJs 17
 # 📢 | Debian (Arm64)
 `ghcr.io/acidicmonkeys/arm64:debian_latest` - Debian Latest
+`ghcr.io/acidicmonkeys/arm64:debian_stable` - Debian Stable
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
