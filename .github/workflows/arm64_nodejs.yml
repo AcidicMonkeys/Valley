@@ -57,4 +57,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/beetnodes/arm64:nodejs_${{ matrix.tag }}
+            ghcr.io/acidicmonkeys/arm64:nodejs_${{ matrix.tag }}
