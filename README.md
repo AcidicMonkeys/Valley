@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/oSrkyJs.png" width=80% /></p>
+<p align="center"><img src="https://i.imgur.com/oSrkyJs.png" width=100% /></p>
 <p align="center">Public Docker images designed for Pterodactyl/WISP panel!</p>
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-Docker-384d54" /></p>
 
