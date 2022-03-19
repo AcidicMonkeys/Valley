@@ -3,7 +3,7 @@
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-Docker-384d54" /></p>
 
 # ⚙️ | Arm64 Images
-These are the actuals Arm64 images.
+Those are the actuals Arm64 images.
 # 📢 | NodeJs (Arm64)
 1. `ghcr.io/acidicmonkeys/arm64:nodejs_17` - NodeJs 17
 2. `ghcr.io/acidicmonkeys/arm64:nodejs_16` - NodeJs 16
