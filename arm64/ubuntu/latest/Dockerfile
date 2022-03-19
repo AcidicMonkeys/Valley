@@ -26,8 +26,12 @@ LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
             && apt-get upgrade -y \
-            && apt-get install -y zip unzip wget curl git ca-certificates iproute2 tzdata \
+            && apt-get install -y locales zip unzip wget curl git ca-certificates iproute2 tzdata \
+            && rm -rf /var/lib/apt/lists/* \
+            && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
             && useradd -m -d /home/container container
+
+ENV LANG en_US.utf8
 
 USER        container
 ENV         USER=container HOME=/home/container
