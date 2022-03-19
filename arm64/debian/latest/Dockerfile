@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # /////////////////////////////////////////////////////////////////////////// #
 #                                                                             #
 #                      Copyright 2022 TheH2SO4                                #
@@ -20,20 +18,18 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Start [📍] || #
+# || Debian [🚀]-[Latest]-[Arm64] || #
 
-cd /home/container # || Change container's work directory.
+FROM        arm64v8/debian:latest
 
-export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local variable that makes the private Docker IP address available for the processes.
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
-node -v # || Show the actual NodeJs version.
+RUN         apt-get update -y && apt-get upgrade -y && apt-get install -y ca-certificates iproute2 tzdata \
+            && useradd -m -d /home/container container
 
-npm -v # || Show the actual NPM version.
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
 
-python3 --version # || Show the actual Python version.
-
-MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
-
-echo -e "\u001b[1m\u001b[33mcontainer@pterodactyl~ \u001b[0m:/home/container$ ${MODIFIED_STARTUP}" # || Show the new Startup command.
-
-eval ${MODIFIED_STARTUP} # || Start the server.
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
