@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Alpine [Workflow]-[Arm64] || #
+# || Alpine [Workflow]-[Hybrid] || #
 
-name: Arm64 Alpine
+name: Hybrid Alpine
 
 on:
   workflow_dispatch:
@@ -30,11 +30,11 @@ on:
     branches:
       - main
     paths:
-      - arm64/alpine/**
+      - hybrid/alpine/**
       
 jobs:
   push:
-    name: "arm64:alpine_${{ matrix.tag }}"
+    name: "hybrid:alpine_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -54,9 +54,8 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./arm64/alpine
-          file: ./arm64/alpine/${{ matrix.tag }}/Dockerfile
-          platforms: linux/arm64
+          context: ./hybrid/alpine
+          file: ./hybrid/alpine/${{ matrix.tag }}/Dockerfile
           push: true
           tags: |
-            ghcr.io/acidicmonkeys/arm64:alpine_${{ matrix.tag }}
+            ghcr.io/acidicmonkeys/hybrid:alpine_${{ matrix.tag }}
