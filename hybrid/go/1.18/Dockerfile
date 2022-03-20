@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || GOlang [🚀]-[Latest]-[Hybrid] || #
+# || GOlang [🚀]-[1.18]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH golang:latest
+FROM        --platform=$TARGETOS/$TARGETARCH golang:1.18.0
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
