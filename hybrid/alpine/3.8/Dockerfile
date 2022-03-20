@@ -18,49 +18,19 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Alpine [Workflow]-[Hybrid] || #
+# || Alpine [🚀]-[3.8]-[Hybrid] || #
 
-name: Hybrid Alpine
+FROM        --platform=$TARGETOS/$TARGETARCH alpine:3.8
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - hybrid/alpine/**
-      
-jobs:
-  push:
-    name: "hybrid:alpine_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 3.8
-          - 3.9
-          - 3.11
-          - 3.12
-          - 3.13
-          - 3.14
-          - latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./hybrid/alpine
-          file: ./hybrid/alpine/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/hybrid:alpine_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apk update \
+            && apk add --update git ca-certificates iproute2 tzdata \
+            && adduser -D -h /home/container container
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]

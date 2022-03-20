@@ -32,8 +32,9 @@ Those are the actuals images.
 2. `ghcr.io/acidicmonkeys/hybrid:alpine_3.14` - Alpine 3.14
 3. `ghcr.io/acidicmonkeys/hybrid:alpine_3.13` - Alpine 3.13
 4. `ghcr.io/acidicmonkeys/hybrid:alpine_3.12` - Alpine 3.12
-4. `ghcr.io/acidicmonkeys/hybrid:alpine_3.11` - Alpine 3.11
-4. `ghcr.io/acidicmonkeys/hybrid:alpine_3.9` - Alpine 3.9
+5. `ghcr.io/acidicmonkeys/hybrid:alpine_3.11` - Alpine 3.11
+6. `ghcr.io/acidicmonkeys/hybrid:alpine_3.9` - Alpine 3.9
+7. `ghcr.io/acidicmonkeys/hybrid:alpine_3.9` - Alpine 3.8
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
