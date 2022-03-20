@@ -20,12 +20,12 @@
 
 # || Python [🚀]-[3.5]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.5
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.6
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
-            && apt-get -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python-is-python3 \
+            && apt-get -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
             && useradd -m -d /home/container container
 
 USER        container
