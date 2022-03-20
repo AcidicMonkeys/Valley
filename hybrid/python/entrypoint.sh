@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # /////////////////////////////////////////////////////////////////////////// #
 #                                                                             #
 #                      Copyright 2022 TheH2SO4                                #
@@ -18,51 +20,16 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || NodeJs [Workflow]-[Hybrid] || #
+# || Start [📍] || #
 
-name: Hybrid NodeJs
+cd /home/container # || Change container's work directory.
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - hybrid/nodejs/**
-      
-jobs:
-  push:
-    name: "hybrid:nodejs_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 8
-          - 10
-          - 11
-          - 12
-          - 13
-          - 14
-          - 15
-          - 16
-          - 17
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./hybrid/nodejs
-          file: ./hybrid/nodejs/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/hybrid:nodejs_${{ matrix.tag }}
+export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local variable that makes the private Docker IP address available for the processes.
+
+python3 --version # || Show the actual Python version.
+
+MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
+
+echo -e "\u001b[1m\u001b[33mcontainer@pterodactyl~ \u001b[0m:/home/container$ ${MODIFIED_STARTUP}" # || Show the new Startup command.
+
+eval ${MODIFIED_STARTUP} # || Start the server.
