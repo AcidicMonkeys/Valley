@@ -22,6 +22,7 @@ Those are the actuals images.
 10. `ghcr.io/acidicmonkeys/hybrid:nodejs_8` - NodeJs 8
 # 📢 | Python
 1. `ghcr.io/acidicmonkeys/hybrid:python_latest` - Python Latest
+2. `ghcr.io/acidicmonkeys/hybrid:python_3.11` - Python 3.11
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
@@ -34,7 +35,7 @@ Those are the actuals images.
 4. `ghcr.io/acidicmonkeys/hybrid:alpine_3.12` - Alpine 3.12
 5. `ghcr.io/acidicmonkeys/hybrid:alpine_3.11` - Alpine 3.11
 6. `ghcr.io/acidicmonkeys/hybrid:alpine_3.9` - Alpine 3.9
-7. `ghcr.io/acidicmonkeys/hybrid:alpine_3.9` - Alpine 3.8
+7. `ghcr.io/acidicmonkeys/hybrid:alpine_3.8` - Alpine 3.8
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
