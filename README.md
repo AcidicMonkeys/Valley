@@ -39,9 +39,8 @@ Those are the actuals images.
 7. `ghcr.io/acidicmonkeys/hybrid:go_1.13` - GOlang 1.13
 8. `ghcr.io/acidicmonkeys/hybrid:go_1.12` - GOlang 1.12
 9. `ghcr.io/acidicmonkeys/hybrid:go_1.11` - GOlang 1.11
-10. `ghcr.io/acidicmonkeys/hybrid:go_1.10` - GOlang 1.10
-11. `ghcr.io/acidicmonkeys/hybrid:go_1.9` - GOlang 1.9
-12. `ghcr.io/acidicmonkeys/hybrid:go_1.8` - GOlang 1.8
+10. `ghcr.io/acidicmonkeys/hybrid:go_1.9` - GOlang 1.9
+11. `ghcr.io/acidicmonkeys/hybrid:go_1.8` - GOlang 1.8
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
