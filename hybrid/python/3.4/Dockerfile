@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Python [🚀]-[3.5]-[Hybrid] || #
+# || Python [🚀]-[3.4]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.5
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.4
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
