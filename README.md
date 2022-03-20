@@ -1,9 +1,12 @@
-<p align="center"><img src="https://i.imgur.com/oSrkyJs.png" width=100% /></p>
+<p align="center"><img src="/src/assets/images/1.png" width=60% /></p>
 <p align="center">Public Docker images designed for Pterodactyl/WISP panel!</p>
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-Docker-384d54" /></p>
 
 # ⚙️ | Images
 Those are the actuals images.
+
+<p align="center"><img src="/src/assets/images/1.png" width=100% /></p>
+
 # 📢 | NodeJs
 1. `ghcr.io/acidicmonkeys/hybrid:nodejs_17` - NodeJs 17
 2. `ghcr.io/acidicmonkeys/hybrid:nodejs_16` - NodeJs 16

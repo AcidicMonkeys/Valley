@@ -20,7 +20,7 @@
 
 # || NodeJs [Workflow]-[hybrid] || #
 
-name: hybrid NodeJs
+name: Hybrid NodeJs
 
 on:
   workflow_dispatch:
