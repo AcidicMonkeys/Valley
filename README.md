@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/AcidicMonkeys/Valley/blob/main/src/assets/images/logo.png" width=60% /></p>
+<p align="center"><img src="https://github.com/AcidicMonkeys/Valley/blob/main/src/assets/images/logo.png" width=30% /></p>
 <p align="center">Public Docker images designed for Pterodactyl/WISP panel!</p>
 <p align="center"><img src="https://img.shields.io/badge/Made%20with-Docker-384d54" /></p>
 
