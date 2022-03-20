@@ -20,7 +20,7 @@ Those are the actuals images.
 8. `ghcr.io/acidicmonkeys/hybrid:nodejs_11` - NodeJs 11
 9. `ghcr.io/acidicmonkeys/hybrid:nodejs_10` - NodeJs 10
 10. `ghcr.io/acidicmonkeys/hybrid:nodejs_8` - NodeJs 8
-# 📢 | Python [3]
+# 📢 | Python
 1. `ghcr.io/acidicmonkeys/hybrid:python_latest` - Python Latest
 2. `ghcr.io/acidicmonkeys/hybrid:python_3.9` - Python 3.9
 3. `ghcr.io/acidicmonkeys/hybrid:python_3.8` - Python 3.8
