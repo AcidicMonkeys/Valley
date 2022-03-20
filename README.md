@@ -34,10 +34,12 @@ Those are the actuals images.
 2. `ghcr.io/acidicmonkeys/hybrid:go_1.18` - GOlang 1.18
 3. `ghcr.io/acidicmonkeys/hybrid:go_1.17` - GOlang 1.17
 4. `ghcr.io/acidicmonkeys/hybrid:go_1.16` - GOlang 1.16
-5. `ghcr.io/acidicmonkeys/hybrid:go_1.16` - GOlang 1.15
-6. `ghcr.io/acidicmonkeys/hybrid:go_1.16` - GOlang 1.14
-7. `ghcr.io/acidicmonkeys/hybrid:go_1.16` - GOlang 1.13
-8. `ghcr.io/acidicmonkeys/hybrid:go_1.16` - GOlang 1.12
+5. `ghcr.io/acidicmonkeys/hybrid:go_1.15` - GOlang 1.15
+6. `ghcr.io/acidicmonkeys/hybrid:go_1.14` - GOlang 1.14
+7. `ghcr.io/acidicmonkeys/hybrid:go_1.13` - GOlang 1.13
+8. `ghcr.io/acidicmonkeys/hybrid:go_1.12` - GOlang 1.12
+9. `ghcr.io/acidicmonkeys/hybrid:go_1.11` - GOlang 1.11
+10. `ghcr.io/acidicmonkeys/hybrid:go_1.10` - GOlang 1.10
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
