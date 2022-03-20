@@ -29,6 +29,8 @@ Those are the actuals images.
 6. `ghcr.io/acidicmonkeys/hybrid:python_3.5` - Python 3.5
 7. `ghcr.io/acidicmonkeys/hybrid:python_3.4` - Python 3.4
 8. `ghcr.io/acidicmonkeys/hybrid:python_2.7` - Python 2.7
+# 📢 | GOlang
+1. `ghcr.io/acidicmonkeys/hybrid:go_latest` - GOlang Latest
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
