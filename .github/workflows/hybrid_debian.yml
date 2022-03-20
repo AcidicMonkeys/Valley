@@ -40,7 +40,6 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - 7
           - 9
           - 10
           - stable
