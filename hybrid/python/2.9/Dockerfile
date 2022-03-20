@@ -18,56 +18,19 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Python [Workflow]-[Hybrid] || #
+# || Python [🚀]-[2.9]-[Hybrid] || #
 
-name: Hybrid Python
+FROM        --platform=$TARGETOS/$TARGETARCH python:2.9
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - hybrid/python/**
-      
-jobs:
-  push:
-    name: "hybrid:python_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 2.6
-          - 2.7
-          - 2.8
-          - 2.9
-          - 3.1
-          - 3.2
-          - 3.3
-          - 3.4
-          - 3.5
-          - 3.6
-          - 3.7
-          - 3.8
-          - 3.9
-          - latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./hybrid/python
-          file: ./hybrid/python/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/hybrid:python_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apt-get update -y \
+            && apt-get -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && useradd -m -d /home/container container
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
