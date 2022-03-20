@@ -27,6 +27,10 @@ Those are the actuals images.
 4. `ghcr.io/acidicmonkeys/hybrid:python_3.7` - Python 3.7
 5. `ghcr.io/acidicmonkeys/hybrid:python_3.6` - Python 3.6
 6. `ghcr.io/acidicmonkeys/hybrid:python_3.5` - Python 3.5
+7. `ghcr.io/acidicmonkeys/hybrid:python_3.4` - Python 3.4
+8. `ghcr.io/acidicmonkeys/hybrid:python_3.3` - Python 3.3
+9. `ghcr.io/acidicmonkeys/hybrid:python_3.2` - Python 3.2
+10. `ghcr.io/acidicmonkeys/hybrid:python_3.2` - Python 3.1
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
