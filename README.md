@@ -22,11 +22,11 @@ Those are the actuals images.
 10. `ghcr.io/acidicmonkeys/hybrid:nodejs_8` - NodeJs 8
 # 📢 | Python
 1. `ghcr.io/acidicmonkeys/hybrid:python_latest` - Python Latest
-2. `ghcr.io/acidicmonkeys/hybrid:python_3.11` - Python 3.9
-3. `ghcr.io/acidicmonkeys/hybrid:python_3.11` - Python 3.8
-4. `ghcr.io/acidicmonkeys/hybrid:python_3.11` - Python 3.7
-5. `ghcr.io/acidicmonkeys/hybrid:python_3.11` - Python 3.6
-6. `ghcr.io/acidicmonkeys/hybrid:python_3.11` - Python 3.5
+2. `ghcr.io/acidicmonkeys/hybrid:python_3.9` - Python 3.9
+3. `ghcr.io/acidicmonkeys/hybrid:python_3.8` - Python 3.8
+4. `ghcr.io/acidicmonkeys/hybrid:python_3.7` - Python 3.7
+5. `ghcr.io/acidicmonkeys/hybrid:python_3.6` - Python 3.6
+6. `ghcr.io/acidicmonkeys/hybrid:python_3.5` - Python 3.5
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
