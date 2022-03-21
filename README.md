@@ -55,6 +55,9 @@ Those are the actuals images.
 7. `ghcr.io/acidicmonkeys/hybrid:alpine_3.8` - Alpine 3.8
 # 📢 | Fedora
 1. `ghcr.io/acidicmonkeys/hybrid:fedora_latest` - Fedora Latest
+2. `ghcr.io/acidicmonkeys/hybrid:fedora_37` - Fedora 37
+3. `ghcr.io/acidicmonkeys/hybrid:fedora_36` - Fedora 36
+4. `ghcr.io/acidicmonkeys/hybrid:fedora_35` - Fedora 35
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
