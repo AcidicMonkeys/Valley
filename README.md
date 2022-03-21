@@ -58,6 +58,7 @@ Those are the actuals images.
 2. `ghcr.io/acidicmonkeys/hybrid:fedora_37` - Fedora 37
 3. `ghcr.io/acidicmonkeys/hybrid:fedora_36` - Fedora 36
 4. `ghcr.io/acidicmonkeys/hybrid:fedora_35` - Fedora 35
+5. `ghcr.io/acidicmonkeys/hybrid:fedora_34` - Fedora 34
 
 # ❗| Thanks to...
 Thanks to Pterodactyl Panel for making this little project possible! :)
