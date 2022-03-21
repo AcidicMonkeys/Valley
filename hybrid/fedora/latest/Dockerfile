@@ -24,9 +24,8 @@ FROM        --platform=$TARGETOS/$TARGETARCH fedora:latest
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
-RUN         apt-get update -y \
-            && apt-get upgrade -y \
-            && apt-get install -y git ca-certificates iproute2 tzdata \
+RUN         dnf upgrade -y \
+            && dnf install -y git ca-certificates iproute2 tzdata \
             && adduser -D -h /home/container container
 
 USER        container
