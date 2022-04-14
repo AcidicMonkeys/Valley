@@ -43,7 +43,6 @@ Those are the actuals images.
 # 📢 | Nginx
 1. `ghcr.io/acidicmonkeys/hybrid:nginx_php8` - Nginx PHP8
 2. `ghcr.io/acidicmonkeys/hybrid:nginx_php7` - Nginx PHP7
-3. `ghcr.io/acidicmonkeys/hybrid:nginx_php6` - Nginx PHP6
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable

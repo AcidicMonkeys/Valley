@@ -40,7 +40,6 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - php6
           - php7
           - php8
     steps:
