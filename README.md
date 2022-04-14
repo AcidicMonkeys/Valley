@@ -43,11 +43,9 @@ Those are the actuals images.
 # 📢 | PHP
 1. `ghcr.io/acidicmonkeys/hybrid:php_8` - PHP 8
 2. `ghcr.io/acidicmonkeys/hybrid:php_7` - PHP 7
-2. `ghcr.io/acidicmonkeys/hybrid:php_7` - PHP 5
 # 📢 | Nginx
 1. `ghcr.io/acidicmonkeys/hybrid:nginx_php8` - Nginx PHP 8
 2. `ghcr.io/acidicmonkeys/hybrid:nginx_php7` - Nginx PHP 7
-2. `ghcr.io/acidicmonkeys/hybrid:nginx_php5` - Nginx PHP 5
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable

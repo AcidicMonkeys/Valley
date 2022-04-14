@@ -40,7 +40,6 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - 5
           - 7
           - 8
     steps:
