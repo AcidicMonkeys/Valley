@@ -18,7 +18,7 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Dockerfile [🚀]-[Latest]-[Hybrid] || #
+# || Dockerfile [🚀]-[PHP8]-[Hybrid] || #
 
 FROM        --platform=$TARGETOS/$TARGETARCH alpine:latest
 
