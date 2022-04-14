@@ -20,7 +20,7 @@
 
 # || Dockerfile [🚀]-[Latest]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH nginx:latest-alpine
+FROM        --platform=$TARGETOS/$TARGETARCH nginx:alpine
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
