@@ -18,9 +18,9 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Nginx [Workflow]-[Hybrid] || #
+# ||  PHP [Workflow]-[Hybrid] || #
 
-name: Hybrid Nginx
+name: Hybrid PHP
 
 on:
   workflow_dispatch:
@@ -30,18 +30,18 @@ on:
     branches:
       - main
     paths:
-      - hybrid/nginx/**
+      - hybrid/php/**
       
 jobs:
   push:
-    name: "hybrid:nginx_${{ matrix.tag }}"
+    name: "hybrid:php_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         tag:
-          - php7
-          - php8
+          - 7
+          - 8
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-qemu-action@v1
@@ -53,9 +53,9 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./hybrid/nginx
-          file: ./hybrid/nginx/${{ matrix.tag }}/Dockerfile
+          context: ./hybrid/php
+          file: ./hybrid/php/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/acidicmonkeys/hybrid:nginx_${{ matrix.tag }}
+            ghcr.io/acidicmonkeys/hybrid:php_${{ matrix.tag }}
