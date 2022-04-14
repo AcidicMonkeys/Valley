@@ -18,45 +18,18 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Dockerfile [Workflow]-[Hybrid] || #
+# || Dockerfile [🚀]-[PHP6]-[Hybrid] || #
 
-name: Hybrid Dockerfile
+FROM        --platform=$TARGETOS/$TARGETARCH alpine:latest
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - hybrid/nginx/**
-      
-jobs:
-  push:
-    name: "hybrid:nginx_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - php6
-          - php7
-          - php8
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./hybrid/nginx
-          file: ./hybrid/nginx/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/hybrid:nginx_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apk --update --no-cache add ca-certificates nginx \
+            && apk add php6 php6-fpm php6-session php6-soap php6-openssl php6-gmp php6-pdo_odbc php6-json php6-dom php6-pdo php6-zip php6-mysqli php6-sqlite3 php6-pdo_pgsql php6-bcmath php6-gd php6-odbc php6-pdo_mysql php6-pdo_sqlite php6-gettext php6-xmlreader php6-bz2 php6-iconv php6-pdo_dblib php6-curl php6-ctype php6-phar php6-fileinfo php6-mbstring php6-tokenizer
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/ash", "/entrypoint.sh" ]
