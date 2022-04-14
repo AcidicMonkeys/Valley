@@ -25,8 +25,7 @@ FROM        --platform=$TARGETOS/$TARGETARCH nginx:latest
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
-            && apt-get -y install curl wget ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python-is-python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
-            && npm -g install npm@latest \
+            && apt-get -y install ca-certificates nginx php8 php8-fpm php8-session php8-soap php8-openssl php8-gmp php8-pdo_odbc php8-json php8-dom php8-pdo php8-zip php8-mysqli php8-sqlite3 php8-pdo_pgsql php8-bcmath php8-gd php8-odbc php8-pdo_mysql php8-pdo_sqlite php8-gettext php8-xmlreader  php8-bz2 php8-iconv php8-pdo_dblib php8-curl php8-ctype php8-phar php8-fileinfo php8-mbstring php8-tokenizer \
             && useradd -m -d /home/container container
 
 USER        container
