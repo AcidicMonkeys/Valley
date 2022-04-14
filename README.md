@@ -40,6 +40,9 @@ Those are the actuals images.
 8. `ghcr.io/acidicmonkeys/hybrid:go_1.12` - GOlang 1.12
 9. `ghcr.io/acidicmonkeys/hybrid:go_1.11` - GOlang 1.11
 10. `ghcr.io/acidicmonkeys/hybrid:go_1.9` - GOlang 1.9
+# 📢 | PHP
+1. `ghcr.io/acidicmonkeys/hybrid:php_8` - PHP 8
+2. `ghcr.io/acidicmonkeys/hybrid:php_7` - PHP 7
 # 📢 | Nginx
 1. `ghcr.io/acidicmonkeys/hybrid:nginx_php8` - Nginx PHP8
 2. `ghcr.io/acidicmonkeys/hybrid:nginx_php7` - Nginx PHP7
