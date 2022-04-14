@@ -40,6 +40,8 @@ Those are the actuals images.
 8. `ghcr.io/acidicmonkeys/hybrid:go_1.12` - GOlang 1.12
 9. `ghcr.io/acidicmonkeys/hybrid:go_1.11` - GOlang 1.11
 10. `ghcr.io/acidicmonkeys/hybrid:go_1.9` - GOlang 1.9
+# 📢 | Nginx
+1. `ghcr.io/acidicmonkeys/hybrid:nginx_latest` - Nginx Latest
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
