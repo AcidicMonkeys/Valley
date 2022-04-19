@@ -18,14 +18,14 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || NodeJs [🚀]-[jdk-8]-[Hybrid] || #
+# || NodeJs [🚀]-[jre-8]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH node:16.14.2
+FROM        --platform=$TARGETOS/$TARGETARCH debian:9.13
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
-            && apt-get -y install curl wget ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+            && apt-get -y install nodejs curl wget ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
             && npm -g install npm@latest \
             && apt-get -y install openjdk-8-jre \
             && useradd -m -d /home/container container
