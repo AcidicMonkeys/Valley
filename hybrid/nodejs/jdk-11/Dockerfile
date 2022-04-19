@@ -18,15 +18,16 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Python [🚀]-[Jdk-9]-[Hybrid] || #
+# || NodeJs [🚀]-[Jdk-11]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.7
+FROM        --platform=$TARGETOS/$TARGETARCH node:16.14.2
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
-            && apt-get install -y openjdk-9-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python-is-python3 \
-            && adduser -D -h /home/container container
+            && apt-get -y install openjdk-11-jdk curl wget ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+            && npm -g install npm@latest \
+            && useradd -m -d /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
