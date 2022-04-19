@@ -18,43 +18,19 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Java [Workflow]-[Hybrid] || #
+# || Python [🚀]-[Jdk-11]-[Hybrid] || #
 
-name: Hybrid Java
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.7
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - hybrid/java/**
-      
-jobs:
-  push:
-    name: "hybrid:java_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 11
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./hybrid/java
-          file: ./hybrid/java/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/hybrid:java_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apt-get update -y \
+            && apt-get install -y openjdk-11-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python-is-python3 \
+            && adduser -D -h /home/container container
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
