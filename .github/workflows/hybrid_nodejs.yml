@@ -40,7 +40,6 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - jre-8
           - 8
           - 10
           - 11
