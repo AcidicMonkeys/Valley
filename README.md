@@ -21,8 +21,7 @@ Those are the actuals images.
 9. `ghcr.io/acidicmonkeys/hybrid:nodejs_10` - NodeJs 10
 10. `ghcr.io/acidicmonkeys/hybrid:nodejs_8` - NodeJs 8
 11. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-11` - NodeJs 16 (Jdk-11)
-12. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-11` - NodeJs 16 (Jdk-10)
-14. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-11` - NodeJs 16 (Jdk-8)
+12. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-8` - NodeJs 16 (Jdk-8)
 # 📢 | Python
 1. `ghcr.io/acidicmonkeys/hybrid:python_latest` - Python Latest
 2. `ghcr.io/acidicmonkeys/hybrid:python_3.9` - Python 3.9
@@ -33,8 +32,6 @@ Those are the actuals images.
 7. `ghcr.io/acidicmonkeys/hybrid:python_3.4` - Python 3.4
 8. `ghcr.io/acidicmonkeys/hybrid:python_2.7` - Python 2.7
 9. `ghcr.io/acidicmonkeys/hybrid:python_jdk-11` - Python 3.7 (Jdk-11)
-10. `ghcr.io/acidicmonkeys/hybrid:python_jdk-11` - Python 3.7 (Jdk-10)
-12. `ghcr.io/acidicmonkeys/hybrid:python_jdk-11` - Python 3.7 (Jdk-8)
 # 📢 | GOlang
 1. `ghcr.io/acidicmonkeys/hybrid:go_latest` - GOlang Latest
 2. `ghcr.io/acidicmonkeys/hybrid:go_1.18` - GOlang 1.18
