@@ -26,7 +26,7 @@ LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
             && apt-get upgrade -y \
-            && apt-get install -y openjdk11 python3 python-is-python3 \
+            && apt-get install -y openjdk-11-jdk python3 python-is-python3 \
             && adduser -D -h /home/container container
 
 USER        container
