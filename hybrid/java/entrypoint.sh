@@ -28,6 +28,8 @@ export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local va
 
 python3 --version # || Show the actual Python version.
 
+pip3 --version # || Show the actual PIP version.
+
 java --version # || Show the actual Java version.
 
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
