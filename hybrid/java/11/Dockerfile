@@ -20,14 +20,12 @@
 
 # || Java [🚀]-[11]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH debian:stable
+FROM        --platform=$TARGETOS/$TARGETARCH debian:10
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
             && apt-get upgrade -y \
-            && add-apt-repository ppa:openjdk-r/ppa \
-            && apt-get update -y \
             && apt-get install -y openjdk11 python3 python-is-python3 \
             && adduser -D -h /home/container container
 
