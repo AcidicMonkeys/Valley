@@ -18,55 +18,23 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || NodeJs [Workflow]-[Hybrid] || #
+# || Python [🚀]-[Jdk-10]-[Hybrid] || #
 
-name: Hybrid NodeJs
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.7
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 1"
-  push:
-    branches:
-      - main
-    paths:
-      - hybrid/nodejs/**
-      
-jobs:
-  push:
-    name: "hybrid:nodejs_${{ matrix.tag }}"
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        tag:
-          - 8
-          - 10
-          - 11
-          - 12
-          - 13
-          - 14
-          - 15
-          - 16
-          - 17
-          - jdk-8
-          - jdk-10
-          - jdk-11
-          - latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: docker/setup-qemu-action@v1
-      - uses: docker/setup-buildx-action@v1
-      - uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
-      - uses: docker/build-push-action@v2
-        with:
-          context: ./hybrid/nodejs
-          file: ./hybrid/nodejs/${{ matrix.tag }}/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: |
-            ghcr.io/acidicmonkeys/hybrid:nodejs_${{ matrix.tag }}
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
+
+RUN         apt-get update -y \
+            && apt-get install -y openjdk-11-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python-is-python3 \
+            && apt-get -y install software-properties-common \
+            && apt-add-repository 'deb http://security.debian.org/debian-security stretch/updates main' \
+            && apt-get update -y \
+            && apt-get -y install openjdk-10-jdk \
+            && adduser -D -h /home/container container
+
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
