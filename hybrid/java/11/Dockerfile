@@ -26,7 +26,7 @@ LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
             && apt-get upgrade -y \
-            && apt-get install -y openjdk-11-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && apt-get install -y openjdk-11-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python3-pip python3 \
             && adduser -D -h /home/container container
 
 USER        container
