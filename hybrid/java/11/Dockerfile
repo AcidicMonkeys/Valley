@@ -20,16 +20,18 @@
 
 # || Java [🚀]-[11]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH alpine:latest
+FROM        --platform=$TARGETOS/$TARGETARCH debian:stable
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
-RUN         apk --update --no-cache add ca-certificates nginx \
-            && apk add openjdk11 python3 py3-pip
+RUN         apt-get update -y \
+            && apt-get upgrade -y \
+            && apt-get install -y openjdk11 python3 python-is-python3 \
+            && adduser -D -h /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/ash", "/entrypoint.sh" ]
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
