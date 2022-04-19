@@ -18,14 +18,14 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Python [🚀]-[Jdk-10]-[Hybrid] || #
+# || Python [🚀]-[Jdk-9]-[Hybrid] || #
 
 FROM        --platform=$TARGETOS/$TARGETARCH python:3.7
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
 RUN         apt-get update -y \
-            && apt-get install -y openjdk-10-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python-is-python3 \
+            && apt-get install -y openjdk-9-jdk git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps python-is-python3 \
             && adduser -D -h /home/container container
 
 USER        container
