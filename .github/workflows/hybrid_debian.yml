@@ -40,7 +40,6 @@ jobs:
       fail-fast: false
       matrix:
         tag:
-          - dotnet-5
           - mono
           - 9
           - 10
