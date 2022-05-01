@@ -11,17 +11,18 @@ Those are the actuals images.
 
 # 📢 | NodeJs
 1. `ghcr.io/acidicmonkeys/hybrid:nodejs_latest` - NodeJs Latest
-2. `ghcr.io/acidicmonkeys/hybrid:nodejs_17` - NodeJs 17
-3. `ghcr.io/acidicmonkeys/hybrid:nodejs_16` - NodeJs 16
-4. `ghcr.io/acidicmonkeys/hybrid:nodejs_15` - NodeJs 15
-5. `ghcr.io/acidicmonkeys/hybrid:nodejs_14` - NodeJs 14
-6. `ghcr.io/acidicmonkeys/hybrid:nodejs_13` - NodeJs 13
-7. `ghcr.io/acidicmonkeys/hybrid:nodejs_12` - NodeJs 12
-8. `ghcr.io/acidicmonkeys/hybrid:nodejs_11` - NodeJs 11
-9. `ghcr.io/acidicmonkeys/hybrid:nodejs_10` - NodeJs 10
-10. `ghcr.io/acidicmonkeys/hybrid:nodejs_8` - NodeJs 8
-11. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-11` - NodeJs 16 (Jdk-11)
-12. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-8` - NodeJs 16 (Jdk-8)
+2. `ghcr.io/acidicmonkeys/hybrid:nodejs_18` - NodeJs 18
+3. `ghcr.io/acidicmonkeys/hybrid:nodejs_17` - NodeJs 17
+4. `ghcr.io/acidicmonkeys/hybrid:nodejs_16` - NodeJs 16
+5. `ghcr.io/acidicmonkeys/hybrid:nodejs_15` - NodeJs 15
+6. `ghcr.io/acidicmonkeys/hybrid:nodejs_14` - NodeJs 14
+7. `ghcr.io/acidicmonkeys/hybrid:nodejs_13` - NodeJs 13
+8. `ghcr.io/acidicmonkeys/hybrid:nodejs_12` - NodeJs 12
+9. `ghcr.io/acidicmonkeys/hybrid:nodejs_11` - NodeJs 11
+10. `ghcr.io/acidicmonkeys/hybrid:nodejs_10` - NodeJs 10
+11. `ghcr.io/acidicmonkeys/hybrid:nodejs_8` - NodeJs 8
+12. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-11` - NodeJs 16 (Jdk-11)
+13. `ghcr.io/acidicmonkeys/hybrid:nodejs_jdk-8` - NodeJs 16 (Jdk-8)
 # 📢 | Python
 1. `ghcr.io/acidicmonkeys/hybrid:python_latest` - Python Latest
 2. `ghcr.io/acidicmonkeys/hybrid:python_3.9` - Python 3.9

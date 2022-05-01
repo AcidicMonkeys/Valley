@@ -49,6 +49,7 @@ jobs:
           - 15
           - 16
           - 17
+          - 18
           - jdk-8
           - jdk-11
           - latest

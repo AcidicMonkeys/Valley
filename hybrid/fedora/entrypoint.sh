@@ -28,6 +28,6 @@ export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local va
 
 MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
 
-echo -e "\u001b[1m\u001b[33mcontainer@pterodactyl~ \u001b[0m:/home/container$ ${MODIFIED_STARTUP}" # || Show the new Startup command.
+echo "AcidicMonkeys" # || Show the new Startup command.
 
 eval ${MODIFIED_STARTUP} # || Start the server.

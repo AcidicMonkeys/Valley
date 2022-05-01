@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # /////////////////////////////////////////////////////////////////////////// #
 #                                                                             #
 #                      Copyright 2022 TheH2SO4                                #
@@ -20,16 +18,20 @@
 
 # ////////////////| [🥽] | TheH2SO4 | [⚗️] |//////////////// #
 
-# || Start [📍] || #
+# || NodeJs [🚀]-[18]-[Hybrid] || #
 
-cd /home/container # || Change container's work directory.
+FROM        --platform=$TARGETOS/$TARGETARCH node:18.0.0
 
-export INTERNAL_IP=`ip route get 1 | awk '{print $NF;exit}'` # || Set a local variable that makes the private Docker IP address available for the processes.
+LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
-python3 --version # || Show the actual Python version.
+RUN         apt-get update -y \
+            && apt-get -y install curl wget ffmpeg iproute2 git sqlite3 libsqlite3-dev python3 python-is-python3 chromium tzdata ca-certificates dnsutils build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev \
+            && npm -g install npm@latest \
+            && useradd -m -d /home/container container
 
-MODIFIED_STARTUP=$(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g') # || Replace the Startup command.
+USER        container
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
 
-echo "AcidicMonkeys" # || Show the new Startup command.
-
-eval ${MODIFIED_STARTUP} # || Start the server.
+COPY        ./entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
