@@ -33,6 +33,7 @@ Those are the actuals images.
 7. `ghcr.io/acidicmonkeys/hybrid:python_3.4` - Python 3.4
 8. `ghcr.io/acidicmonkeys/hybrid:python_2.7` - Python 2.7
 9. `ghcr.io/acidicmonkeys/hybrid:python_jdk-11` - Python 3.7 (Jdk-11)
+10. `ghcr.io/acidicmonkeys/hybrid:python_jdk-8` - Python 3.7 (Jdk-8)
 # 📢 | GOlang
 1. `ghcr.io/acidicmonkeys/hybrid:go_latest` - GOlang Latest
 2. `ghcr.io/acidicmonkeys/hybrid:go_1.18` - GOlang 1.18
