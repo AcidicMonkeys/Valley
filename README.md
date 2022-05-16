@@ -54,10 +54,12 @@ Those are the actuals images.
 # 📢 | Debian
 1. `ghcr.io/acidicmonkeys/hybrid:debian_latest` - Debian Latest
 2. `ghcr.io/acidicmonkeys/hybrid:debian_stable` - Debian Stable
-3. `ghcr.io/acidicmonkeys/hybrid:debian_10` - Debian 10
-4. `ghcr.io/acidicmonkeys/hybrid:debian_9` - Debian 9
-5. `ghcr.io/acidicmonkeys/hybrid:debian_mono` - Debian Mono
-6. `ghcr.io/acidicmonkeys/hybrid:debian_maven` - Debian Maven
+3. `ghcr.io/acidicmonkeys/hybrid:debian_11` - Debian 11
+4. `ghcr.io/acidicmonkeys/hybrid:debian_10` - Debian 10
+5. `ghcr.io/acidicmonkeys/hybrid:debian_9` - Debian 9
+6. `ghcr.io/acidicmonkeys/hybrid:debian_mono` - Debian Mono
+7. `ghcr.io/acidicmonkeys/hybrid:debian_maven` - Debian Maven
+8. `ghcr.io/acidicmonkeys/hybrid:debian_maven` - Debian Mono-Maven (Both)
 # 📢 | Alpine
 1. `ghcr.io/acidicmonkeys/hybrid:alpine_latest` - Alpine Latest
 2. `ghcr.io/acidicmonkeys/hybrid:alpine_3.14` - Alpine 3.14
