@@ -20,7 +20,7 @@
 
 # || NodeJs [🚀]-[18]-[Hybrid] || #
 
-FROM        --platform=$TARGETOS/$TARGETARCH node:18.0.0
+FROM        --platform=$TARGETOS/$TARGETARCH node:18.1.0
 
 LABEL       author="TheH2SO4" maintainer="theh2so4@protonmail.com"
 
