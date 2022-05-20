@@ -59,7 +59,7 @@ Those are the actuals images.
 5. `ghcr.io/acidicmonkeys/hybrid:debian_9` - Debian 9
 6. `ghcr.io/acidicmonkeys/hybrid:debian_mono` - Debian Mono
 7. `ghcr.io/acidicmonkeys/hybrid:debian_maven` - Debian Maven
-8. `ghcr.io/acidicmonkeys/hybrid:debian_maven` - Debian Mono-Maven (Both)
+8. `ghcr.io/acidicmonkeys/hybrid:mono-maven` - Debian Mono-Maven (Both)
 # 📢 | Alpine
 1. `ghcr.io/acidicmonkeys/hybrid:alpine_latest` - Alpine Latest
 2. `ghcr.io/acidicmonkeys/hybrid:alpine_3.14` - Alpine 3.14
